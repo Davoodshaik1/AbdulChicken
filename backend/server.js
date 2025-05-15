@@ -64,6 +64,9 @@ const orderSchema = new mongoose.Schema({
   deliveredAt: { type: Date },
   createdAt: { type: Date, default: Date.now },
 });
+app.get('/', (req, res) => {
+  res.status(200).send('Welcome to Abdul\'s Chicken API! The server is running.');
+});
 
 const Order = mongoose.model('Order', orderSchema);
 
